@@ -149,9 +149,9 @@ void handleButtons() {
   }
 
   // BUTTON_UP and BUTTON_DOWN logic (unchanged)
-  if (digitalRead(BUTTON_UP) == LOW) {
+  if (digitalRead(BUTTON_UP) == LOW && screenOn) {
     handleButtonPress("hours", 1);
-  } else if (digitalRead(BUTTON_DOWN) == LOW) {
+  } else if (digitalRead(BUTTON_DOWN) == LOW && screenOn) {
     handleButtonPress("minutes", 1);
   } else {
     resetButtonState();
